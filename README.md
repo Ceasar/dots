@@ -17,7 +17,11 @@ dots solves this problem by letting you easily install dotfile plugins, where a 
 
 # installation
 
-`git clone git@github.com:Ceasar/dots.git`
+```
+git clone git@github.com:Ceasar/dots.git
+cd dots
+pip install -r requirements.txt
+```
 
 # quickstart
 
