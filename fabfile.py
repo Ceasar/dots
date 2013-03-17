@@ -16,6 +16,9 @@ PWD = os.getcwd()
 
 PLUGINS_DIR = "plugins"
 
+# do not install these files
+IGNORE = set(['.git', '.gitignore'])
+
 
 def install(src, dest):
     """
@@ -37,7 +40,7 @@ def install_plugin(plugin_name):
     """
     plugin_path = join(PLUGINS_DIR, plugin_name)
     for filename in os.listdir(plugin_path):
-        if filename.startswith('.') and filename != '.git':
+        if filename.startswith('.') and filename not in IGNORE:
             install(join(plugin_path, filename), filename)
 
 
