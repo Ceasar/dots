@@ -50,7 +50,7 @@ That's it! Check your home directory. `.examplerc` should exist.
 
 Naturally, what you'll want to do in the future is to clone git repos into `plugins` and write more complex dotfiles. See [Ceasar/dot_gitconfig](https://github.com/Ceasar/dot_gitconfig) as an example.
 
-If you already have a dotfiles repo, the easiest way to get start is just to clone your repo into plugins until you have time to factor everything out.
+If you already have a dotfiles repo, the easiest way to get started is just to clone or move your repo into plugins and link it until you have time to factor everything out.
 
 Also note, dots allows you to clone other people's entire dotfiles and use them as your own! There are a lot of fantastic one that Github has compiled [here](http://dotfiles.github.com/).
 
