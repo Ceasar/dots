@@ -1,18 +1,18 @@
 # dots
 
-Modular dotfile manager.
+Modular dotfile manager. Symlinks dotfiles from plugins to HOME.
 
 # rationale
 
 Sharing dotfiles as a team is a nice idea, but in practice to do so requires solving several problems:
 
 - Not everyone uses the same apps. Vim users don't want your emaces dotfiles and vice-versa.
-    - This makes forking far less useful. People tend to just cherry-pick.
+    - Consequently, forking is not very useful. Anecdotally, people seem to just cherry-pick.
 - Putting all dotfiles in one repo makes history and documentation less useful.
-- If dotfiles are shared, decisions to change them must be conservative.
+- If dotfiles are shared, decisions to change them must be conservative. It makes the most sense to have dotfiles as decentralized as possible to commit to the fewest decision-makers.
 - Many dotfiles themselves tend to be antimodular. By putting them in their own project, they can be organized (and then generated) in a more meaningful way.
 
-What we want is a way to split up dotfiles by app. We want a git repo for each app with meaningful history and for easy fork-ability.
+What we want is a way to split up dotfiles by app, giving us meaningful history and fork-ability.
 
 dots solves this problem by letting you easily install dotfile plugins, where a plugin is simply a directory from which dotfiles can be imported.
 
@@ -52,7 +52,7 @@ Naturally, what you'll want to do in the future is to clone git repos into `plug
 
 If you already have a dotfiles repo, the easiest way to get started is just to clone or move your repo into plugins and link it until you have time to factor everything out.
 
-Also note, dots allows you to clone other people's entire dotfiles and use them as your own! There are a lot of fantastic one that Github has compiled [here](http://dotfiles.github.com/).
+Also note, dots allows you to clone other people's entire dotfiles and use them as your own! There are a lot of fantastic dotfiles that Github has kindly compiled [here](http://dotfiles.github.com/).
 
 # usage
 
