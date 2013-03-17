@@ -8,12 +8,13 @@ Sharing dotfiles as a team is a nice idea, but in practice to do so requires sol
 
 - Not everyone uses the same apps. Vim users don't want your emaces dotfiles and vice-versa.
     - This makes forking far less useful. People tend to just cherry-pick.
-- Putting all dotfiles in one repo makes history less useful.
-- Decisions to change dotfiles must be conservative.
+- Putting all dotfiles in one repo makes history and documentation less useful.
+- If dotfiles are shared, decisions to change them must be conservative.
+- Many dotfiles themselves tend to be antimodular. By putting them in their own project, they can be organized (and then generated) in a more meaningful way.
 
-What we want is a way to split up dotfiles by app. We want a git repo for each app, with meaning history for each and easy fork-ability.
+What we want is a way to split up dotfiles by app. We want a git repo for each app with meaningful history and for easy fork-ability.
 
-dots solves this problem by letting you easily install dotfile plugins, where a plugin is simply a directory from which dotfiles can be pulled.
+dots solves this problem by letting you easily install dotfile plugins, where a plugin is simply a directory from which dotfiles can be imported.
 
 # installation
 
