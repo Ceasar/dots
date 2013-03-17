@@ -45,7 +45,8 @@ fab install_all
 
 That's it! Check your home directory. `.examplerc` should exist.
 
-Naturally, what you'll want to do in the future is to clone git repos into `plugins` and write more complex dotfiles.
+Naturally, what you'll want to do in the future is to clone git repos into `plugins` and write more complex dotfiles. See [Ceasar/dot_gitconfig](https://github.com/Ceasar/dot_gitconfig) as an example.
+
 
 # usage
 
