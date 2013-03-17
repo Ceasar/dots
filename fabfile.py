@@ -30,8 +30,7 @@ def install(src, dest):
         result = local('ln -s %s %s' % (source, dest), capture=True)
     if result.failed:
         if confirm("%s exists. Replace it?" % dest):
-            local("rm %s" % dest)
-            install(src, dest)
+            local('ln -Ffs %s %s' % (source, dest), capture=True)
 
 
 def install_plugin(plugin_name):
