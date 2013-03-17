@@ -6,7 +6,7 @@ Modular dotfile manager. Symlinks dotfiles from plugins to HOME.
 
 Sharing dotfiles as a team is a nice idea, but in practice to do so requires solving several problems:
 
-- Not everyone uses the same apps. Vim users don't want your emaces dotfiles and vice-versa.
+- Not everyone uses the same apps. Vim users don't want your emacs dotfiles and vice-versa.
     - Consequently, forking is not very useful. Anecdotally, people seem to just cherry-pick.
 - Putting all dotfiles in one repo makes history and documentation less useful.
 - If dotfiles are shared, decisions to change them must be conservative. It makes the most sense to have dotfiles as decentralized as possible to commit to the fewest decision-makers.
