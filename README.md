@@ -2,7 +2,7 @@
 
 Modular dotfile manager. Symlinks dotfiles from plugins to HOME.
 
-# rationale
+# Rationale
 
 Sharing dotfiles as a team is a nice idea, but in practice to do so requires solving several problems:
 
@@ -16,7 +16,7 @@ What we want is a way to split up dotfiles by app, giving us meaningful history 
 
 dots solves this problem by letting you easily install dotfile plugins, where a plugin is simply a directory from which dotfiles can be imported.
 
-# installation
+# Installation
 
 ```
 git clone git@github.com:Ceasar/dots.git
@@ -24,7 +24,7 @@ cd dots
 pip install -r requirements.txt
 ```
 
-# quickstart
+# Quickstart
 
 We can see how dots works by means of a simple example. We'll create a simple plugin and then link it.
 
@@ -46,15 +46,15 @@ fab install_all
 
 That's it! Check your home directory. `.examplerc` should exist.
 
-## remarks
+# Remarks
 
 Naturally, what you'll want to do in the future is to clone git repos into `plugins` and write more complex dotfiles. See [Ceasar/dot_gitconfig](https://github.com/Ceasar/dot_gitconfig) as an example.
 
 If you already have a dotfiles repo, the easiest way to get started is just to clone or move your repo into plugins and link it until you have time to factor everything out.
 
-Also note, dots allows you to clone other people's entire dotfiles and use them as your own! There are a lot of fantastic dotfiles that Github has kindly compiled [here](http://dotfiles.github.com/).
+If you do not already have a dotfiles repo, dots allows you to clone other people's entire dotfiles and use them as your own! Github has kindly compiled many fantastic [dotfiles](http://dotfiles.github.com/) that may be useful to get started.
 
-# usage
+# Usage
 
 Install all plugins via `fab install_all`.
 
