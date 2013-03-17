@@ -6,7 +6,7 @@ Install all plugins via `fab install_all`.
 Install an individual plugin via: `fab install_plugin:PLUGIN_NAME`
 """
 import os
-from os.path import join
+from os.path import join, isdir
 
 from fabric.api import local, settings
 from fabric.contrib.console import confirm
@@ -23,8 +23,6 @@ def install(src, dest):
     """
     source = join(PWD, src)
     dest = join(HOME, dest)
-    print PWD, HOME
-    print source, dest
     with settings(warn_only=True):
         result = local('ln -s %s %s' % (source, dest), capture=True)
     if result.failed:
@@ -39,7 +37,7 @@ def install_plugin(plugin_name):
     """
     plugin_path = join(PLUGINS_DIR, plugin_name)
     for filename in os.listdir(plugin_path):
-        if filename.startswith('.'):
+        if filename.startswith('.') and filename != '.git':
             install(join(plugin_path, filename), filename)
 
 
@@ -49,4 +47,5 @@ def install_all():
     """
     plugins_path = join(PWD, PLUGINS_DIR)
     for plugin in os.listdir(plugins_path):
-        install_plugin(plugin)
+        if isdir(join(plugins_path, plugin)):
+            install_plugin(plugin)
