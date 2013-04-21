@@ -1,4 +1,5 @@
 Fabric==1.6.0
 paramiko==1.10.0
 pycrypto==2.6
+repos==0.0.1
 wsgiref==0.1.2

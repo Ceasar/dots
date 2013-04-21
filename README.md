@@ -30,6 +30,7 @@ We can see how dots works by means of a simple example. We'll create a simple pl
 
 ```
 cd dots
+mkdir plugins
 cd plugins
 mkdir example
 echo "hello!" > example/.examplerc
@@ -41,10 +42,26 @@ Great! We've made our first plugin!
 Now we can link it to our `HOME` directory.
 
 ```
-fab install_all
+fab link:plugins
 ```
 
 That's it! Check your home directory. `.examplerc` should exist.
+
+# Usage
+
+dots relies on fabric. Therefore all commands are of the form:
+
+`fab COMMAND:ARG1,ARG2,..`
+
+Use `fab --list` to see all command and `fab -d COMMAND` for detailed help.
+
+Available commands:
+
+    link               Install each of the dotfiles from each repo or a single one.
+    repos.from_config  Install git repos from a config file in the directory.
+    repos.install      Install a git repo in the directory.
+    repos.uninstall    Uninstall a git repo in the directory.
+    repos.update       Update a git repo in the directory or all of them.
 
 # Remarks
 
@@ -54,8 +71,4 @@ If you already have a dotfiles repo, the easiest way to get started is just to c
 
 If you do not already have a dotfiles repo, dots allows you to clone other people's entire dotfiles and use them as your own! Github has kindly compiled many fantastic [dotfiles](http://dotfiles.github.com/) that may be useful to get started.
 
-# Usage
-
-Install all plugins via `fab install_all`.
-
-Install an individual plugin via: `fab install_plugin:PLUGIN_NAME`
+You can also keep track of different sets of dotfiles by keeping different configurations in different folders.
