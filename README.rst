@@ -3,43 +3,43 @@
 dots
 ================================================================================
 
-Modular dotfile manager. Symlinks dotfiles from plugins to HOME.
+**dots** is package manager for dotfiles; it automates installing, upgrading,
+configuring, and removing dotfiles.
 
-Rationale
+A *package* is simply a directory from which dotfiles can be imported.
+
+Motivation
 ================================================================================
 
-Sharing dotfiles as a team is a nice idea, but in practice to do so requires
-solving several problems:
+Historically, dotfiles have been anti-modular; they have been difficult to
+separate and recombine.
 
-- Not everyone uses the same apps. Vim users don't want your emacs dotfiles and
-  vice-versa.
+At the macro level, this was so because people stored all of their dotfiles in a
+single repository. This meant that any given repository contained many files
+which were irrelevant to someone browsing them; no Emacs user has an interest in
+a ``.vimrc``.
 
-  Consequently, forking is not very useful. Anecdotally, people seem to just
-  cherry-pick.
+At the micro level, 
 
-- Putting all dotfiles in one repo makes history and documentation less useful.
+Benefits
+================================================================================
 
-- If dotfiles are shared, decisions to change them must be conservative. It
-  makes the most sense to have dotfiles as decentralized as possible to commit
-  to the fewest decision-makers.
+- **Never lose a dotfile again.** As parts of packages, dotfiles are always
+  in version control.
 
-- Many dotfiles themselves tend to be antimodular. By putting them in their own
-  project, they can be organized (and then generated) in a more meaningful way.
+- **Customize your dotfiles by cherry-picking the good parts of dotfiles you
+  like.** It's as easy as ``dots install X``.
 
-What we want is a way to split up dotfiles by app, giving us meaningful history
-and fork-ability.
-
-dots solves this problem by letting you easily install dotfile plugins, where a
-plugin is simply a directory from which dotfiles can be imported.
+- **Collaborate on and share dotfiles liberally.** By working with cohesive
+  *parts* of dotfiles, there is less risk in making a change that someone might
+  not like.
 
 Installation
 ================================================================================
 
 To install dots, simply::
 
-    git clone git@github.com:Ceasar/dots.git
-    cd dots
-    pip install -r requirements.txt
+    pip install dots
 
 Quickstart
 ================================================================================
